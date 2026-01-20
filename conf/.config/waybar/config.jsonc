@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+    "include": [
+			"~/.config/waybar/modul.jsonc"
+		],
+
+    "modules-left": [
+			"custom/appmenu",
+			"clock",
+			"custom/motrix",
+			"power-profiles-daemon",
+			"hyprland/workspaces",
+			"custom/media"
+		],
+		
+    "modules-center": [
+				
+		],
+		
+    "modules-right": [
+			"tray",	
+			"group/monitor", 
+			"group/control",
+			"group/session",
+		],
+
+		// group monitor
+		"group/monitor": {
+			"orientation": "horizontal",
+			"modules":[
+				"network",
+				"temperature",
+				"cpu",
+				"memory",
+				"battery"
+			]
+		},
+
+		// group control
+		"group/control": {
+			"orientation": "horizontal",
+			"modules":[
+				"backlight",
+				"bluetooth",
+				"pulseaudio",
+				"pulseaudio#microphone"
+			]
+		},
+
+
+		// Group Exit
+		"group/session": {
+			"orientation": "horizontal",
+			"modules": [
+				"custom/sessions"
+			]
+		}
+}

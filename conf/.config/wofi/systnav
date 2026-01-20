@@ -1,0 +1,11 @@
+mode=drun
+show=drun
+columns=2
+term=kitty
+gtk_dark=true
+sort_order=alpha
+allow_images=true
+pre_display_exec=true
+prompt=Search Applications
+stylesheet=systnav.css
+normal_window=true

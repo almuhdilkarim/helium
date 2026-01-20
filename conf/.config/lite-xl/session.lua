@@ -1,0 +1,1 @@
+return {recents={[1]="/home/user/.config"}, window={[1]=780,[2]=402,[3]=0,[4]=0,["n"]=4}, window_mode="maximized", previous_find={[7]="sway",[1]="ignore_paths",[2]="tray",[3]="Lite",[4]="margin-top",[5]="border-radius: 0px 7px 7px 0px;",[6]="swap-icon-label"}, previous_replace={}}

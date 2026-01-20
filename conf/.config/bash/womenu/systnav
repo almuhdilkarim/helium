@@ -1,0 +1,39 @@
+#!/bin/env bash
+
+set -e
+
+function raviza_navmenu_movers() {
+
+	sleep 0.2 &&
+
+	# Get current cursor position using hyprctl and parse with jq , the output is in JSON format: {"x": 123, "y": 456}
+	local cursor_a=$(hyprctl cursorpos -j)
+	local cursor_x=$(echo "$cursor_a" | jq -r '.x')
+	local cursor_y=$(echo "$cursor_a" | jq -r '.y')
+
+	# calculate the new position (e.g., move one pixel to the right)
+	setcur_x=$((cursor_x + 2))
+	setcur_y=$cursor_y 					# Y stays the same
+
+	# dispatch the movecursor command with the new absolute coordinates
+	hyprctl dispatch movecursor "$setcur_x" "$setcur_y"
+
+	# unset variable
+	unset cursor_a
+	unset cursor_x
+	unset cursor_y
+	unset setcur_x
+	unset setcur_y
+}
+
+function raviza_navmenu_action() {
+	if [[ -n $( ps -A | grep wofi ) ]]; then
+		pkill wofi 
+	else
+		wofi --conf ~/.config/wofi/systnav & 
+	fi
+
+	raviza_navmenu_movers 
+}
+
+raviza_navmenu_action

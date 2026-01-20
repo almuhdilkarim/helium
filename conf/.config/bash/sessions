@@ -1,0 +1,15 @@
+#!/bin/env bash
+
+function raviza_systems() {
+
+  local system="$HOME/.config/bash/systems"
+  test -f $system/bashir && source $system/bashir
+  test -f $system/aliase && source $system/aliase
+}
+
+
+function raviza_loader() {
+  raviza_systems
+}
+
+raviza_loader

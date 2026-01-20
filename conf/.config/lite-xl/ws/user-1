@@ -1,0 +1,1 @@
+return { path = "/home/user", documents = {["active_view"]=1,["views"]={[1]={["filename"]=".config/waybar/style.css",["active"]=true,["text"]=false,["scroll"]={["x"]=0,["y"]=0},["selection"]={[1]=60,[2]=17,[3]=60,[4]=17},["type"]="doc"}},["type"]="leaf"}, directories = {} }

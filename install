@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+# -- BUG rido text ediot
+cp -fr conf/.* $HOME &&
+sudo cp -fr conf/.* /etc/skel
