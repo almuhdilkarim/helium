@@ -78,6 +78,8 @@ tooltip {
 #window,
 #custom-appmenu,
 #custom-sessions,
+#custom-console,
+#custom-desktop,
 #custom-lock_screen,
 #custom-wol,
 #custom-updates,
@@ -117,6 +119,22 @@ tooltip {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 0;
+}
+
+#custom-console{
+    color: #89b4fa;
+    padding-left: 10px;
+    padding-right: 0px;
+    background-color: #2f354a;
+    border-radius: 0px;
+}
+
+#custom-desktop{
+    color: #89b4fa;
+    padding-left: 10px;
+    padding-right: 0px;
+    background-color: #2f354a;
+    border-radius: 0px;
 }
 
 #custom-motrix{
